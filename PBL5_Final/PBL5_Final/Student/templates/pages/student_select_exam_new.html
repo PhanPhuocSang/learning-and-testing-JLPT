@@ -1,0 +1,22 @@
+{% extends 'student_base.html' %}
+{% load static %}
+{% block content %}
+<div class="container-fluid no-padding content-area no-sidebar" style="background-image: url('{% static 'images/background3.png' %}'); background-repeat: no-repeat; background-size: cover;">
+       
+    <div class="row" style="height: 150px;"></div>
+    <div class="row d-flex justify-content-center align-items-center" style=" height: 130px;">
+        <h2 class="text-center">CHỌN TRÌNH ĐỘ</h2>
+    </div>
+    <div class="row button-trinhdo justify-content-center" style="height: 90px;">
+        <div class="col-sm-4 d-flex justify-content-center align-items-center">
+            <div class="btn btn-outline-dark btn-custom mx-3"><a class="btn_capdo" style="text-decoration: none;" href="{% url 'Student:ExamList' level='N5' %}">N5</a></div>
+            <div class="btn btn-outline-dark btn-custom mx-3"><a class="btn_capdo" style="text-decoration: none;" href="{% url 'Student:ExamList' level='N4' %}">N4</a></div>
+            <div class="btn btn-outline-dark btn-custom mx-3"><a class="btn_capdo" style="text-decoration: none;" href="{% url 'Student:ExamList' level='N3' %}">N3</a></div>
+            <div class="btn btn-outline-dark btn-custom mx-3"><a class="btn_capdo" style="text-decoration: none;" href="{% url 'Student:ExamList' level='N2' %}">N2</a></div>
+            <div class="btn btn-outline-dark btn-custom mx-3"><a class="btn_capdo" style="text-decoration: none;" href="{% url 'Student:ExamList' level='N1' %}">N1</a></div>
+        </div>
+    </div>
+    <div class="row" style="height: 230px;">
+    </div>
+</div>
+{% endblock content %}

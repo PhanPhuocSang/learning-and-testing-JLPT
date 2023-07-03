@@ -1,0 +1,14 @@
+{% extends 'teacher_base.html' %}
+{% load static %}
+{% block linkcss %}
+    <link rel="stylesheet" href="{% static 'css/pages/exam_manager.css' %}">
+{% endblock linkcss %}
+
+{% block content %}
+<div class = "row document-list">
+  {% include "partials/teacher_filter_document.html" %}
+  <div class = "container" id="document-list-container">
+    {% include "Document/document_list.html" %}
+  </div>
+</div>
+{% endblock content %}
